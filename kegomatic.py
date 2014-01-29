@@ -92,7 +92,7 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   # Display everything
   pygame.display.flip()
 
-# Root Beer, on Pin 22.
+# Beer, on Pin 22.
 def doAClick(channel):
   currentTime = int(time.time() * FlowMeter.MS_IN_A_SECOND)
   if fm.enabled == True:
