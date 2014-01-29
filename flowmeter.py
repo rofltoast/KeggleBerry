@@ -1,5 +1,6 @@
 import time
 
+#Init flowmeter class
 class FlowMeter():
   PINTS_IN_A_LITER = 2.11338
   SECONDS_IN_A_MINUTE = 60
@@ -45,18 +46,19 @@ class FlowMeter():
   def getFormattedHertz(self):
      return str(round(self.hertz,3)) + ' Hz'
   
+  #Get flow per second
   def getFormattedFlow(self):
     if(self.displayFormat == 'metric'):
       return str(round(self.flow,3)) + ' L/s'
     else:
       return str(round(self.flow * FlowMeter.PINTS_IN_A_LITER, 3)) + ' pints/s'
-  
+  #Get current flow reading
   def getFormattedThisPour(self):
     if(self.displayFormat == 'metric'):
       return str(round(self.thisPour,3)) + ' L'
     else:
       return str(round(self.thisPour * FlowMeter.PINTS_IN_A_LITER, 3)) + ' pints'
-  
+  #Get/Update overall total pour of keg
   def getFormattedTotalPour(self):
     if(self.displayFormat == 'metric'):
       return str(round(self.totalPour,3)) + ' L'
