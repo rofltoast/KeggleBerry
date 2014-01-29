@@ -124,13 +124,13 @@ while True:
   
   currentTime = int(time.time() * FlowMeter.MS_IN_A_SECOND)
   
-  if (fm.thisPour > 0.23 and currentTime - fm.lastClick > 5000): # 5 seconds of inactivity causes a tweet
+  if (fm.thisPour > 0.23 and currentTime - fm.lastClick > 2000): # 2 seconds of inactivity causes a tweet
     tweet = "Someone just poured " + fm.getFormattedThisPour() + " of " + BEER1 + " from the keg!" 
     ######insert SQL push here(thisPour)
     fm.thisPour = 0.0
     tweetPour(tweet)
  
-  if (fm2.thisPour > 0.23 and currentTime - fm2.lastClick > 5000): # 5 seconds of inactivity causes a tweet
+  if (fm2.thisPour > 0.23 and currentTime - fm2.lastClick > 2000): # 2 seconds of inactivity causes a tweet
     tweet = "Someone just poured " + fm2.getFormattedThisPour() + " of " + BEER2 + " from the keg!"
     ######insert SQL push here(thisPour)
     fm2.thisPour = 0.0
