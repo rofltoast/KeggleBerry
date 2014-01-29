@@ -57,7 +57,7 @@ front_bot = adabot(220, 527, 220, 888)
 
 def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   # Clear the screen
-  windowSurface.blit(bg,(0,0))
+  windowSurface.fill(BLACK)#No background image; black fill
   
   # draw the adabots
   back_bot.update()
