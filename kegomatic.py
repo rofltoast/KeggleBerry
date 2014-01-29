@@ -68,7 +68,7 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   windowSurface.blit(front_bot.image,(front_bot.x, front_bot.y))
 
   # Draw Ammt Poured
-  text = basicFont.render("CURRENT", True, WHITE, BLACK)
+  text = basicFont.render("CURRENT:", True, WHITE, BLACK)
   textRect = text.get_rect()
   windowSurface.blit(text, (40,20))
   text = basicFont.render(flowMeter.getFormattedThisPour(), True, WHITE, BLACK)
@@ -79,7 +79,7 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   windowSurface.blit(text, (40, 30+(2*(LINEHEIGHT+5))))
 
   # Draw Ammt Poured Total
-  text = basicFont.render("TOTAL", True, WHITE, BLACK)
+  text = basicFont.render("TOTAL:", True, WHITE, BLACK)
   textRect = text.get_rect()
   windowSurface.blit(text, (windowInfo.current_w - textRect.width - 40, 20))
   text = basicFont.render(flowMeter.getFormattedTotalPour(), True, WHITE, BLACK)
@@ -125,13 +125,13 @@ while True:
   currentTime = int(time.time() * FlowMeter.MS_IN_A_SECOND)
   
   if (fm.thisPour > 0.05 and currentTime - fm.lastClick > 2000): # 2 seconds of inactivity causes a tweet
-    tweet = "Someone just poured " + fm.getFormattedThisPour() + " of " + BEER1 + " from the keg!" 
+    tweet = "Someone just poured " + fm.getFormattedThisPour() + "pints of " + BEER1 + " from the keg!" 
     ######insert SQL push here(thisPour)
     fm.thisPour = 0.0
     tweetPour(tweet)
  
   if (fm2.thisPour > 0.05 and currentTime - fm2.lastClick > 2000): # 2 seconds of inactivity causes a tweet
-    tweet = "Someone just poured " + fm2.getFormattedThisPour() + " of " + BEER2 + " from the keg!"
+    tweet = "Someone just poured " + fm2.getFormattedThisPour() + "pints of " + BEER2 + " from the keg!"
     ######insert SQL push here(thisPour)
     fm2.thisPour = 0.0
     tweetPour(tweet)
