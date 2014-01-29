@@ -15,8 +15,8 @@ t = Twitter( auth=OAuth(OAUTH_TOKEN, OAUTH_SECRET, CONSUMER_KEY, CONSUMER_SECRET
 
 boardRevision = GPIO.RPI_REVISION
 GPIO.setmode(GPIO.BCM) # use real GPIO numbering
-GPIO.setup(22,GPIO.IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(23,GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(22,GPIO.IN, pull_up_down=GPIO.PUD_UP)#Set software pullup on pin 22
+GPIO.setup(23,GPIO.IN, pull_up_down=GPIO.PUD_UP)#Set software pullup on pin 23
 
 # set up pygame
 pygame.init()
@@ -24,14 +24,16 @@ pygame.init()
 # set up the window
 VIEW_WIDTH = 1248
 VIEW_HEIGHT = 688
-pygame.display.set_caption('KEGBOT')
+BEER1 = 'Pale Ale'
+BEER2 = 'Stout'
+pygame.display.set_caption('KeggleBerry')
 
 # hide the mouse
 pygame.mouse.set_visible(False)
 
 # set up the flow meters
-fm = FlowMeter('metric')
-fm2 = FlowMeter('metric')
+fm = FlowMeter('Pints')#Default measurement is pints, swtich to 'metric' for L
+fm2 = FlowMeter('Pints')#Default measurement is pints, swtich to 'metric' for L
 fm.enabled = False
 tweet = ''
 
@@ -42,7 +44,7 @@ WHITE = (255,255,255)
 # set up the window surface
 windowSurface = pygame.display.set_mode((VIEW_WIDTH,VIEW_HEIGHT), FULLSCREEN, 32) 
 windowInfo = pygame.display.Info()
-FONTSIZE = 48
+FONTSIZE = 35
 LINEHEIGHT = 28
 basicFont = pygame.font.SysFont(None, FONTSIZE)
 
@@ -109,8 +111,8 @@ def tweetPour(theTweet):
   except:
     logging.warning('Error tweeting: ' + theTweet + "\n")
 
-GPIO.add_event_detect(22, GPIO.RISING, callback=doAClick, bouncetime=20)
-GPIO.add_event_detect(23, GPIO.RISING, callback=doAClick2, bouncetime=20)
+GPIO.add_event_detect(22, GPIO.RISING, callback=doAClick, bouncetime=20)#Set 'rising edge' detection on pin 22
+GPIO.add_event_detect(23, GPIO.RISING, callback=doAClick2, bouncetime=20)#Set 'rising edge' detection on pin 23
 
 # main loop
 while True:
@@ -123,13 +125,13 @@ while True:
   
   currentTime = int(time.time() * FlowMeter.MS_IN_A_SECOND)
   
-  if (fm.thisPour > 0.23 and currentTime - fm.lastClick > 10000): # 10 seconds of inactivity causes a tweet
-    tweet = "Someone just poured " + fm.getFormattedThisPour() + " of root beer from the Adafruit kegomatic!" 
+  if (fm.thisPour > 0.23 and currentTime - fm.lastClick > 5000): # 5 seconds of inactivity causes a tweet
+    tweet = "Someone just poured " + fm.getFormattedThisPour() + " of beer #1 from the keg!" 
     fm.thisPour = 0.0
     tweetPour(tweet)
  
-  if (fm2.thisPour > 0.23 and currentTime - fm2.lastClick > 10000): # 10 seconds of inactivity causes a tweet
-    tweet = "Someone just poured " + fm2.getFormattedThisPour() + " of beer from the Adafruit kegomatic!"
+  if (fm2.thisPour > 0.23 and currentTime - fm2.lastClick > 5000): # 5 seconds of inactivity causes a tweet
+    tweet = "Someone just poured " + fm2.getFormattedThisPour() + " of beer #2 from the keg!"
     fm2.thisPour = 0.0
     tweetPour(tweet)
 
