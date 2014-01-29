@@ -34,7 +34,6 @@ pygame.mouse.set_visible(False)
 # set up the flow meters
 fm = FlowMeter('Pints')#Default measurement is pints, swtich to 'metric' for L
 fm2 = FlowMeter('Pints')#Default measurement is pints, swtich to 'metric' for L
-fm.enabled = False
 tweet = ''
 
 # set up the colors
