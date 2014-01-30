@@ -16,6 +16,7 @@ class FlowMeter():
   totalPour = 0.0 # in Liters
   bLevel = 40.0
   bLevelL = 18.9271
+  grainBill = 38
 
   def __init__(self, displayFormat):
     self.displayFormat = displayFormat
@@ -54,20 +55,28 @@ class FlowMeter():
       return str(round(self.flow,3)) + ' L/s'
     else:
       return str(round(self.flow * FlowMeter.PINTS_IN_A_LITER, 3)) + ' pints/s'
+      
   #Get current flow reading
   def getFormattedThisPour(self):
     if(self.displayFormat == 'metric'):
       return str(round(self.thisPour,3)) + ' L'
     else:
       return str(round(self.thisPour * FlowMeter.PINTS_IN_A_LITER, 3)) + ' pints'
+      
   #Get/Update overall total pour of keg
   def getFormattedTotalPour(self):
     if(self.displayFormat == 'metric'):
       return str(round(self.totalPour,3)) + ' L'
     else:
       return str(round(self.totalPour * FlowMeter.PINTS_IN_A_LITER, 3)) + ' pints'
+      
+  #Get/Update remaining beer
   def getFormattedRemaining(self):
     if(self.displayFormat == 'metric'):
-      return str(round(self.bLevelL - self.totalPour, 3)) + ' L'
+      return str(round(self.bLevelL - self.totalPour, 2)) + ' L'
     else:
-      return str(round(self.bLevel - self.totalPour * FlowMeter.PINTS_IN_A_LITER, 3)) + ' pints remaining'
+      return str(round(self.bLevel - self.totalPour * FlowMeter.PINTS_IN_A_LITER, 2)) + ' pints remaining'
+      
+  #Display cost for current pour
+  def getFormattedPrice(self):
+    return str(round(self.thisPour * self.grainBill / 40, 2))
