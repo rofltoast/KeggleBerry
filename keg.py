@@ -72,6 +72,11 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   # Draw Beer Name Left
   text = beerFont.render("Stout", True, WHITE, BLACK)
   textRect = text.get_rect()
+  windowSurface.blit(text, (windowInfo.current_w - textRect.width - 80, 0))
+
+  # Draw Beer Name Left
+  text = beerFont.render("Stout", True, WHITE, BLACK)
+  textRect = text.get_rect()
   windowSurface.blit(text, (80,0))
 
   # Draw Ammt Poured
