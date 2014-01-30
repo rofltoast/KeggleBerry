@@ -45,10 +45,12 @@ windowSurface = pygame.display.set_mode((VIEW_WIDTH,VIEW_HEIGHT), FULLSCREEN, 32
 windowInfo = pygame.display.Info()
 FONTSIZE = 35
 LINEHEIGHT = 28
+beerFONTSIZE = 48
 basicFont = pygame.font.SysFont(None, FONTSIZE)
+beerFont = pygame.font.SysFont(None, beerFONTSIZE)
 
 # set up the background
-bg = pygame.image.load('beer-bg.png')
+# bg = pygame.image.load('beer-bg.png')
 
 # set up the adabots
 back_bot = adabot(361, 151, 361, 725)
@@ -66,6 +68,11 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   windowSurface.blit(middle_bot.image,(middle_bot.x, middle_bot.y))
   front_bot.update()
   windowSurface.blit(front_bot.image,(front_bot.x, front_bot.y))
+
+  # Draw Beer Name Left
+  text = beerFont.render("Stout", True, WHITE, BLACK)
+  textRect = text.get_rect()
+  windowSurface.blit(text, (30,20))
 
   # Draw Ammt Poured
   text = basicFont.render("CURRENT:", True, WHITE, BLACK)
