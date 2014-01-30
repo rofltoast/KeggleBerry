@@ -95,13 +95,13 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   textRect = text.get_rect()
   windowSurface.blit(text, (windowInfo.current_w - textRect.width - 80, 220 + LINEHEIGHT))
   
-  text = basicFont.render("TOTAL", True, WHITE, BLACK)
+  text = basicFont.render("TOTAL:", True, WHITE, BLACK)
   textRect = text.get_rect()
-  windowSurface.blit(text, (windowInfo.current_w - textRect.width - 130, 220 + (2 * (LINEHEIGHT+125))))
+  windowSurface.blit(text, (windowInfo.current_w - textRect.width - 133, 220 + (2 * (LINEHEIGHT+125))))
   
   text = basicFont.render(flowMeter.getFormattedTotalPour(), True, WHITE, BLACK)
   textRect = text.get_rect()
-  windowSurface.blit(text, (windowInfo.current_w - textRect.width - 130, 220 + (2 * (LINEHEIGHT+140))))
+  windowSurface.blit(text, (windowInfo.current_w - textRect.width - 125, 220 + (2 * (LINEHEIGHT+140))))
 
   # Display everything
   pygame.display.flip()
