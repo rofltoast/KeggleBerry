@@ -14,6 +14,8 @@ class FlowMeter():
   flow = 0 # in Liters per second
   thisPour = 0.0 # in Liters
   totalPour = 0.0 # in Liters
+  bLevel = 40.0
+  bLevelL = 18.9271
 
   def __init__(self, displayFormat):
     self.displayFormat = displayFormat
@@ -64,3 +66,8 @@ class FlowMeter():
       return str(round(self.totalPour,3)) + ' L'
     else:
       return str(round(self.totalPour * FlowMeter.PINTS_IN_A_LITER, 3)) + ' pints'
+  def getFormattedRemaining(self):
+    if(self.displayFormat == 'metric'):
+      return str(round(bLevelL - self.totalPour, 3)) + ' L'
+    else:
+      return str(round(bLevel - (self.totalPour * FlowMeter.PINTS_IN_A_LITER, 3)) + ' pints'
