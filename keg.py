@@ -48,13 +48,12 @@ beerFONTSIZE = 98
 basicFont = pygame.font.SysFont(None, FONTSIZE)
 beerFont = pygame.font.SysFont(None, beerFONTSIZE)
 
-# set up the background
-mug = pygame.image.load('Mug.png')
-windowSurface.blit(mug, (200,200))
-
 def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   # Clear the screen
   windowSurface.fill(BLACK)#No background image; black fill
+  
+  mug = pygame.image.load('Mug.png')
+  windowSurface.blit(mug, (200,200))
   
   # Draw Beer Name Left Keg
   text = beerFont.render(LEFTBEER, True, WHITE, BLACK)
