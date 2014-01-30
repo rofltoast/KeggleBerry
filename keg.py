@@ -8,7 +8,6 @@ from pygame.locals import *
 import RPi.GPIO as GPIO
 from twitter import *
 from flowmeter import *
-from adabot import *
 from seekrits import *
 
 t = Twitter( auth=OAuth(OAUTH_TOKEN, OAUTH_SECRET, CONSUMER_KEY, CONSUMER_SECRET) )
@@ -52,23 +51,10 @@ beerFont = pygame.font.SysFont(None, beerFONTSIZE)
 # set up the background
 # bg = pygame.image.load('beer-bg.png')
 
-# set up the adabots
-back_bot = adabot(361, 151, 361, 725)
-middle_bot = adabot(310, 339, 310, 825)
-front_bot = adabot(220, 527, 220, 888)
-
 def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   # Clear the screen
   windowSurface.fill(BLACK)#No background image; black fill
   
-  # draw the adabots
-  back_bot.update()
-  windowSurface.blit(back_bot.image,(back_bot.x, back_bot.y))
-  middle_bot.update()
-  windowSurface.blit(middle_bot.image,(middle_bot.x, middle_bot.y))
-  front_bot.update()
-  windowSurface.blit(front_bot.image,(front_bot.x, front_bot.y))
-
   # Draw Beer Name Left Keg
   text = beerFont.render(LEFTBEER, True, WHITE, BLACK)
   textRect = text.get_rect()
