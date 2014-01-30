@@ -53,7 +53,7 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   windowSurface.fill(BLACK)#No background image; black fill
   
   mug = pygame.image.load('Mug.png')
-  windowSurface.blit(mug, (200,200))
+  windowSurface.blit(mug, (397,200))
   
   # Draw Beer Name Left Keg
   text = beerFont.render(LEFTBEER, True, WHITE, BLACK)
