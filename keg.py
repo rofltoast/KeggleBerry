@@ -85,7 +85,7 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   
   text = basicFont.render(flowMeter2.getFormattedTotalPour(), True, WHITE, BLACK)
   textRect = text.get_rect()
-  windowSurface.blit(text, (80, 765)))
+  windowSurface.blit(text, (80, 765))
 
   # Draw Ammt Poured Total
   text = basicFont.render("CURRENT:", True, WHITE, BLACK)
