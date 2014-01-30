@@ -69,13 +69,13 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   front_bot.update()
   windowSurface.blit(front_bot.image,(front_bot.x, front_bot.y))
 
-  # Draw Beer Name Left
+  # Draw Beer Name Left Keg
   text = beerFont.render("Stout", True, WHITE, BLACK)
   textRect = text.get_rect()
   windowSurface.blit(text, (windowInfo.current_w - textRect.width - 80, 0))
 
-  # Draw Beer Name Left
-  text = beerFont.render("Stout", True, WHITE, BLACK)
+  # Draw Beer Name Right Keg
+  text = beerFont.render("Pale Ale", True, WHITE, BLACK)
   textRect = text.get_rect()
   windowSurface.blit(text, (80,0))
 
@@ -86,7 +86,7 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   text = basicFont.render(flowMeter.getFormattedThisPour(), True, WHITE, BLACK)
   textRect = text.get_rect()
   windowSurface.blit(text, (80,220+LINEHEIGHT))
-  text = basicFont.render(flowMeter2.getFormattedThisPour(), True, WHITE, BLACK)
+  text = basicFont.render(flowMeter2.getFormattedTotalPour(), True, WHITE, BLACK)
   textRect = text.get_rect()
   windowSurface.blit(text, (80, 220+(2*(LINEHEIGHT+5))))
 
@@ -94,7 +94,7 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   text = basicFont.render("TOTAL:", True, WHITE, BLACK)
   textRect = text.get_rect()
   windowSurface.blit(text, (windowInfo.current_w - textRect.width - 80, 220))
-  text = basicFont.render(flowMeter.getFormattedTotalPour(), True, WHITE, BLACK)
+  text = basicFont.render(flowMeter.getFormattedThisPour(), True, WHITE, BLACK)
   textRect = text.get_rect()
   windowSurface.blit(text, (windowInfo.current_w - textRect.width - 80, 220 + LINEHEIGHT))
   text = basicFont.render(flowMeter2.getFormattedTotalPour(), True, WHITE, BLACK)
