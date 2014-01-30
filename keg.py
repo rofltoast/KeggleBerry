@@ -21,8 +21,8 @@ GPIO.setup(23,GPIO.IN, pull_up_down=GPIO.PUD_UP)#Set software pullup on pin 23
 pygame.init()
 
 # set up the window
-VIEW_WIDTH = 1248
-VIEW_HEIGHT = 688
+VIEW_WIDTH = 1280
+VIEW_HEIGHT = 800
 LEFTBEER = 'Stout'
 RIGHTBEER = 'Pale Ale'
 pygame.display.set_caption('KeggleBerry')
