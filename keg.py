@@ -45,7 +45,7 @@ windowSurface = pygame.display.set_mode((VIEW_WIDTH,VIEW_HEIGHT), FULLSCREEN, 32
 windowInfo = pygame.display.Info()
 FONTSIZE = 35
 LINEHEIGHT = 28
-beerFONTSIZE = 48
+beerFONTSIZE = 98
 basicFont = pygame.font.SysFont(None, FONTSIZE)
 beerFont = pygame.font.SysFont(None, beerFONTSIZE)
 
