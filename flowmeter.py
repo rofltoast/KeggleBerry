@@ -70,4 +70,4 @@ class FlowMeter():
     if(self.displayFormat == 'metric'):
       return str(round(self.bLevelL - self.totalPour, 3)) + ' L'
     else:
-      return str(round(self.bLevel - ((self.totalPour * FlowMeter.PINTS_IN_A_LITER), 3))) + ' pints'
+      return str(round(self.bLevel - self.totalPour * FlowMeter.PINTS_IN_A_LITER, 3))) + ' pints'
