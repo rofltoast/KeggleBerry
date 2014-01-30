@@ -68,6 +68,6 @@ class FlowMeter():
       return str(round(self.totalPour * FlowMeter.PINTS_IN_A_LITER, 3)) + ' pints'
   def getFormattedRemaining(self):
     if(self.displayFormat == 'metric'):
-      return str(round(bLevelL - self.totalPour, 3)) + ' L'
+      return str(round(self.bLevelL - self.totalPour, 3)) + ' L'
     else:
-      return str(round(bLevel - (self.totalPour * FlowMeter.PINTS_IN_A_LITER, 3))) + ' pints'
+      return str(round(self.bLevel - (self.totalPour * FlowMeter.PINTS_IN_A_LITER, 3))) + ' pints'
