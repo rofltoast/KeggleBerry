@@ -49,7 +49,8 @@ basicFont = pygame.font.SysFont(None, FONTSIZE)
 beerFont = pygame.font.SysFont(None, beerFONTSIZE)
 
 # set up the background
-# bg = pygame.image.load('beer-bg.png')
+mug = pygame.image.load('mug.png')
+windowSurface.blit(mug, (200,200))
 
 def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   # Clear the screen
