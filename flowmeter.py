@@ -20,7 +20,7 @@ class FlowMeter():
   beerCal = 71
 
   def __init__(self, beerConf):
-    self.displayFormat = displayFormat
+    self.beerConf = beerConf
     self.clicks = 0
     self.lastClick = int(time.time() * FlowMeter.MS_IN_A_SECOND)
     self.clickDelta = 0
