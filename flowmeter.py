@@ -87,5 +87,5 @@ class FlowMeter():
     return str(round((self.thisPour * FlowMeter.PINTS_IN_A_LITER) * self.beerCal, 2))
     
   def getStatus(self):
-    return str 'true'
+    return FlowMeter.enabled
 
