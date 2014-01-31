@@ -1,0 +1,23 @@
+#Left Beer vars
+beerNameL = ""
+beerCalL = 0
+beerPriceL = 0
+beerInfoL = ""
+beerTotalL = 0
+beerPicL = ""
+beerAboutL = ""
+beerIngL = ""
+beerABVL = 0
+SRML = ''
+
+#Right Beer vars
+beerNameR = ""
+beerCalR = 0
+beerPriceR = 0
+beerInfoR = ""
+beerTotalR = 0
+beerPicR = ""
+beerAboutR = ""
+beerIngR = ""
+beerABVR = 0
+SRMR = ''
