@@ -75,7 +75,7 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
     text = basicFont.render(flowMeter.getFormattedThisPour(), True, WHITE, BLACK)
     textRect = text.get_rect()
     windowSurface.blit(text, (550,200+LINEHEIGHT))
-  if (fm2.enabled == True):
+  elif (fm2.enabled == True):
     text = basicFont.render(flowMeter2.getFormattedThisPour(), True, WHITE, BLACK)
     textRect = text.get_rect()
     windowSurface.blit(text, (550,200+LINEHEIGHT))
