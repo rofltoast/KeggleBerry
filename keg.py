@@ -43,7 +43,6 @@ WHITE = (255,255,255)
 windowSurface = pygame.display.set_mode((VIEW_WIDTH,VIEW_HEIGHT), FULLSCREEN, 32) 
 windowInfo = pygame.display.Info()
 FONTSIZE = 35
-LINEHEIGHT = 28
 beerFONTSIZE = 98
 basicFont = pygame.font.SysFont(None, FONTSIZE)
 beerFont = pygame.font.SysFont(None, beerFONTSIZE)
@@ -75,15 +74,15 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   #windowSurface.blit(text, (80,220))
   text = basicFont.render(flowMeter2.getFormattedThisPour(), True, WHITE, BLACK)
   textRect = text.get_rect()
-  windowSurface.blit(text, (80,220+LINEHEIGHT))
+  windowSurface.blit(text, (80,220))
   # Draw price
   text = basicFont.render(flowMeter2.getFormattedPrice(), True, WHITE, BLACK)
   textRect = text.get_rect()
-  windowSurface.blit(text, (80,250+LINEHEIGHT))
+  windowSurface.blit(text, (80,250))
   # Draw calories
   text = basicFont.render(flowMeter2.getFormattedCal(), True, WHITE, BLACK)
   textRect = text.get_rect()
-  windowSurface.blit(text, (80,280+LINEHEIGHT))
+  windowSurface.blit(text, (80,280))
   #Draw remaining
   text = basicFont.render(flowMeter2.getFormattedRemaining(), True, WHITE, BLACK)
   textRect = text.get_rect()
