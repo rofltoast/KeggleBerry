@@ -1,6 +1,6 @@
 class Info():
 #Left Beer vars
- beerNameL = ""
+ beerNameL = "Indian Pale Ale"
  beerCalL = 10
  beerPriceL = 49
  beerInfoL = ""
@@ -12,7 +12,7 @@ class Info():
  SRML = ''
 
  #Right Beer vars
- beerNameR = ""
+ beerNameR = "Black IPA"
  beerCalR = 89
  beerPriceR = 31
  beerInfoR = ""
