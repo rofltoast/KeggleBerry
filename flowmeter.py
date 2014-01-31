@@ -1,8 +1,6 @@
 import time
 from info import *
 
-beerlevel = info.beerTotalL
-
 #Init flowmeter class
 class FlowMeter():
   PINTS_IN_A_LITER = 2.11338
@@ -36,12 +34,12 @@ class FlowMeter():
     
     if beerConf == 'left':
       self.beer = 'left'
-      #self.bLevel = info.beerTotalL
+      self.bLevel = Info.beerTotalL
       #self.beerCal = info.beerCalL
       #self.grainBill = info.beerPriceL
     else:
       self.beer = 'right'
-      #self.bLevel = info.beerTotalR
+      self.bLevel = Info.beerTotalR
       #self.beerCal = info.beerCalR
       #self.grainBill = info.beerPriceR
       
