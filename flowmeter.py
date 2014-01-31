@@ -16,8 +16,8 @@ class FlowMeter():
   totalPour = 0.0 # in Liters
   bLevel = 40.0
   bLevelL = 18.9271
-  grainBill = 38.00
-  beerCal = 71
+  grainBill = 00.00
+  beerCal = 0
   beer = ''
 
   def __init__(self, beerConf):
@@ -33,9 +33,15 @@ class FlowMeter():
     
     if beerConf == 'left':
       self.beer = 'left'
+      self.bLevel = info.beerTotalL
+      self.beerCal = info.beerCalL
+      self.grainBill = info.beerPriceL
     else:
       self.beer = 'right'
-
+      self.bLevel = info.beerTotalR
+      self.beerCal = info.beerCalR
+      self.grainBill = info.beerPriceR
+      
   def update(self, currentTime):
     self.clicks += 1
     # get the time delta
