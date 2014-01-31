@@ -148,14 +148,14 @@ while True:
   
   if (fm.thisPour > 0.05 and currentTime - fm.lastClick > 2000): # 2 seconds of inactivity causes a tweet
     tweet = "Someone just poured " + fm.getFormattedThisPour() + " of " + LEFTBEER 
-            + " from the keg! ($" + fm.getFormattedPrice()
+      + " from the keg! ($" + fm.getFormattedPrice()
     ######insert SQL push here(thisPour)
     fm.thisPour = 0.0
     tweetPour(tweet)
  
   if (fm2.thisPour > 0.05 and currentTime - fm2.lastClick > 2000): # 2 seconds of inactivity causes a tweet
     tweet = "Someone just poured " + fm2.getFormattedThisPour() + " of " + RIGHTBEER 
-            + " from the keg! ($" + fm2.getFormattedPrice() + ")"
+      + " from the keg! ($" + fm2.getFormattedPrice() + ")"
     ######insert SQL push here(thisPour)
     fm2.thisPour = 0.0
     tweetPour(tweet)
