@@ -16,7 +16,7 @@ class FlowMeter():
   totalPour = 0.0 # in Liters
   bLevel = 40.0
   bLevelL = 18.9271
-  grainBill = 38
+  grainBill = 38.00
 
   def __init__(self, displayFormat):
     self.displayFormat = displayFormat
