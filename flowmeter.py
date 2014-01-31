@@ -5,7 +5,7 @@ class FlowMeter():
   PINTS_IN_A_LITER = 2.11338
   SECONDS_IN_A_MINUTE = 60
   MS_IN_A_SECOND = 1000.0
-  beerConf = ""
+  beerConf = ''
   enabled = True
   clicks = 0
   lastClick = 0
@@ -45,7 +45,7 @@ class FlowMeter():
     # Update the last click
     self.lastClick = currentTime
 
-if self.beerConf == 'left':
+if beerConf == 'left':
   self.beer = 'left'
 else:
   self.beer = 'right'
