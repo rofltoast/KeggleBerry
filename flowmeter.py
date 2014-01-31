@@ -32,7 +32,7 @@ class FlowMeter():
     self.enabled = True
   if self.beerConf == 'left':
     self.beer = 'left'
-  else
+  else:
     self.beer = 'right'
 
   def update(self, currentTime):
