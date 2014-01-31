@@ -1,9 +1,9 @@
 #Left Beer vars
 beerNameL = ""
-beerCalL = 0
-beerPriceL = 0
+beerCalL = 10
+beerPriceL = 49
 beerInfoL = ""
-beerTotalL = 0
+beerTotalL = 40
 beerPicL = ""
 beerAboutL = ""
 beerIngL = ""
@@ -12,10 +12,10 @@ SRML = ''
 
 #Right Beer vars
 beerNameR = ""
-beerCalR = 0
-beerPriceR = 0
+beerCalR = 89
+beerPriceR = 31
 beerInfoR = ""
-beerTotalR = 0
+beerTotalR = 34
 beerPicR = ""
 beerAboutR = ""
 beerIngR = ""
