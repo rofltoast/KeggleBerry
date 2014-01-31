@@ -1,3 +1,4 @@
+Class Info():
 #Left Beer vars
 beerNameL = ""
 beerCalL = 10
