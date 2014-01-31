@@ -75,7 +75,7 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
     text = basicFont.render(flowMeter.getFormattedThisPour(), True, WHITE, BLACK)
     textRect = text.get_rect()
     windowSurface.blit(text, (350,200+LINEHEIGHT))
-  else:
+  elif (fm2.enabled == True):
     text = basicFont.render(flowMeter2.getFormattedThisPour(), True, WHITE, BLACK)
     textRect = text.get_rect()
     windowSurface.blit(text, (450,100+LINEHEIGHT))
@@ -97,10 +97,10 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   #text = basicFont.render(flowMeter2.getFormattedCal(), True, WHITE, BLACK)
   #textRect = text.get_rect()
   #windowSurface.blit(text, (80,280+LINEHEIGHT))
-  ## Draw remaining
-  #text = basicFont.render(flowMeter2.getFormattedRemaining(), True, WHITE, BLACK)
-  #textRect = text.get_rect()
-  #windowSurface.blit(text, (50, 765))
+  # Draw remaining
+  text = basicFont.render(flowMeter2.getFormattedRemaining(), True, WHITE, BLACK)
+  textRect = text.get_rect()
+  windowSurface.blit(text, (50, 765))
 
   #########RIGHT KEG#########
   # Draw Ammt Poured Total
@@ -118,10 +118,10 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   #text = basicFont.render(flowMeter.getFormattedCal(), True, WHITE, BLACK)
   #textRect = text.get_rect()
   #windowSurface.blit(text, (windowInfo.current_w - textRect.width - 80, 280 + LINEHEIGHT))
-  ## Draw remaining
-  #text = basicFont.render(flowMeter.getFormattedRemaining(), True, WHITE, BLACK)
-  #textRect = text.get_rect()
-  #windowSurface.blit(text, (windowInfo.current_w - textRect.width - 55, 765))
+  # Draw remaining
+  text = basicFont.render(flowMeter.getFormattedRemaining(), True, WHITE, BLACK)
+  textRect = text.get_rect()
+  windowSurface.blit(text, (windowInfo.current_w - textRect.width - 55, 765))
 
   # Display everything
   pygame.display.flip()
