@@ -70,7 +70,8 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   text = beerFont.render(RIGHTBEER, True, WHITE, BLACK)
   textRect = text.get_rect()
   windowSurface.blit(text, (80,0))
-
+  
+  #########LEFT KEG#########
   # Draw Ammt Poured
   text = basicFont.render("CURRENT:", True, WHITE, BLACK)
   textRect = text.get_rect()
@@ -89,9 +90,9 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   # Draw remaining
   text = basicFont.render(flowMeter2.getFormattedRemaining(), True, WHITE, BLACK)
   textRect = text.get_rect()
-  windowSurface.blit(text, (80, 765))
+  windowSurface.blit(text, (50, 765))
 
-
+  #########RIGHT KEG#########
   # Draw Ammt Poured Total
   text = basicFont.render("CURRENT:", True, WHITE, BLACK)
   textRect = text.get_rect()
@@ -110,7 +111,7 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   # Draw remaining
   text = basicFont.render(flowMeter.getFormattedRemaining(), True, WHITE, BLACK)
   textRect = text.get_rect()
-  windowSurface.blit(text, (windowInfo.current_w - textRect.width - 125, 765))
+  windowSurface.blit(text, (windowInfo.current_w - textRect.width - 95, 765))
 
   # Display everything
   pygame.display.flip()
