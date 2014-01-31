@@ -31,8 +31,8 @@ pygame.display.set_caption('KeggleBerry')
 pygame.mouse.set_visible(False)
 
 # set up the flow meters
-fm = FlowMeter()#Default measurement is pints, swtich to 'metric' for L
-fm2 = FlowMeter()#Default measurement is pints, swtich to 'metric' for L
+fm = FlowMeter('right')#Default measurement is pints, swtich to 'metric' for L
+fm2 = FlowMeter('left')#Default measurement is pints, swtich to 'metric' for L
 tweet = ''
 
 # set up the colors
