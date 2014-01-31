@@ -51,12 +51,6 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   # Clear the screen
   windowSurface.fill(BLACK)#No background image; black fill
   
-  leftkeg = pygame.image.load('corny.png')
-  windowSurface.blit(leftkeg, (400,70))
-  
-  rightkeg = pygame.image.load('corny.png')
-  windowSurface.blit(rightkeg, (700,70))
-  
   # Draw Beer Name Left Keg
   text = beerFont.render(LEFTBEER, True, WHITE, BLACK)
   textRect = text.get_rect()
