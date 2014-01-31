@@ -35,13 +35,13 @@ class FlowMeter():
     if beerConf == 'left':
       self.beer = 'left'
       self.bLevel = Info.beerTotalL
-      #self.beerCal = info.beerCalL
-      #self.grainBill = info.beerPriceL
+      self.beerCal = Info.beerCalL
+      self.grainBill = Info.beerPriceL
     else:
       self.beer = 'right'
       self.bLevel = Info.beerTotalR
-      #self.beerCal = info.beerCalR
-      #self.grainBill = info.beerPriceR
+      self.beerCal = Info.beerCalR
+      self.grainBill = Info.beerPriceR
       
   def update(self, currentTime):
     self.clicks += 1
@@ -85,4 +85,4 @@ class FlowMeter():
     
   #Display calories for current pour
   def getFormattedCal(self):
-    return str(round((self.thisPour * FlowMeter.PINTS_IN_A_LITER) * self.beerCal, 2)) + ' Calories' + self.beer
+    return str(round((self.thisPour * FlowMeter.PINTS_IN_A_LITER) * self.beerCal, 2)) + ' Calories'
