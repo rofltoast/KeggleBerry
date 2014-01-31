@@ -52,14 +52,11 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   # Clear the screen
   windowSurface.fill(BLACK)#No background image; black fill
   
-  mug = pygame.image.load('Mug.png')
-  windowSurface.blit(mug, (397,200))
-  
   leftkeg = pygame.image.load('corny.png')
-  windowSurface.blit(leftkeg, (0,70))
+  windowSurface.blit(leftkeg, (400,70))
   
   rightkeg = pygame.image.load('corny.png')
-  windowSurface.blit(rightkeg, (946,70))
+  windowSurface.blit(rightkeg, (700,70))
   
   # Draw Beer Name Left Keg
   text = beerFont.render(LEFTBEER, True, WHITE, BLACK)
@@ -71,53 +68,43 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   textRect = text.get_rect()
   windowSurface.blit(text, (80,0))
   
-  if (fm.enabled == True):
-    text = basicFont.render(flowMeter.getFormattedThisPour(), True, WHITE, BLACK)
-    textRect = text.get_rect()
-    windowSurface.blit(text, (550,200+LINEHEIGHT))
-  elif (fm2.enabled == True):
-    text = basicFont.render(flowMeter2.getFormattedThisPour(), True, WHITE, BLACK)
-    textRect = text.get_rect()
-    windowSurface.blit(text, (550,200+LINEHEIGHT))
-  
-  
   #########LEFT KEG#########
-  ## Draw Ammt Poured 
-  #text = basicFont.render("CURRENT:", True, WHITE, BLACK)
-  #textRect = text.get_rect()
-  #windowSurface.blit(text, (80,220))
-  #text = basicFont.render(flowMeter2.getFormattedThisPour(), True, WHITE, BLACK)
-  #textRect = text.get_rect()
-  #windowSurface.blit(text, (80,220+LINEHEIGHT))
-  ## Draw price
-  #text = basicFont.render(flowMeter2.getFormattedPrice(), True, WHITE, BLACK)
-  #textRect = text.get_rect()
-  #windowSurface.blit(text, (80,250+LINEHEIGHT))
-  ## Draw calories
-  #text = basicFont.render(flowMeter2.getFormattedCal(), True, WHITE, BLACK)
-  #textRect = text.get_rect()
-  #windowSurface.blit(text, (80,280+LINEHEIGHT))
-  # Draw remaining
-  text = basicFont.render(flowMeter2.getFormattedRemaining(), True, WHITE, BLACK)
+  # Draw Ammt Poured 
+  text = basicFont.render("CURRENT:", True, WHITE, BLACK)
+  textRect = text.get_rect()
+  windowSurface.blit(text, (80,220))
+  text = basicFont.render(flowMeter2.getFormattedThisPour(), True, WHITE, BLACK)
+  textRect = text.get_rect()
+  windowSurface.blit(text, (80,220+LINEHEIGHT))
+  # Draw price
+  text = basicFont.render(flowMeter2.getFormattedPrice(), True, WHITE, BLACK)
+  textRect = text.get_rect()
+  windowSurface.blit(text, (80,250+LINEHEIGHT))
+  # Draw calories
+  text = basicFont.render(flowMeter2.getFormattedCal(), True, WHITE, BLACK)
+  textRect = text.get_rect()
+  windowSurface.blit(text, (80,280+LINEHEIGHT))
+  #Draw remaining
+  ext = basicFont.render(flowMeter2.getFormattedRemaining(), True, WHITE, BLACK)
   textRect = text.get_rect()
   windowSurface.blit(text, (50, 765))
 
   #########RIGHT KEG#########
   # Draw Ammt Poured Total
-  #text = basicFont.render("CURRENT:", True, WHITE, BLACK)
-  #textRect = text.get_rect()
-  #windowSurface.blit(text, (windowInfo.current_w - textRect.width - 80, 220))
-  #text = basicFont.render(flowMeter.getFormattedThisPour(), True, WHITE, BLACK)
-  #textRect = text.get_rect()
-  #windowSurface.blit(text, (windowInfo.current_w - textRect.width - 80, 220 + LINEHEIGHT))
-  ## Draw price
-  #text = basicFont.render(flowMeter.getFormattedPrice(), True, WHITE, BLACK)
-  #textRect = text.get_rect()
-  #windowSurface.blit(text, (windowInfo.current_w - textRect.width - 80, 250 + LINEHEIGHT))
-  ## Draw calories
-  #text = basicFont.render(flowMeter.getFormattedCal(), True, WHITE, BLACK)
-  #textRect = text.get_rect()
-  #windowSurface.blit(text, (windowInfo.current_w - textRect.width - 80, 280 + LINEHEIGHT))
+  text = basicFont.render("CURRENT:", True, WHITE, BLACK)
+  textRect = text.get_rect()
+  windowSurface.blit(text, (windowInfo.current_w - textRect.width - 80, 220))
+  text = basicFont.render(flowMeter.getFormattedThisPour(), True, WHITE, BLACK)
+  textRect = text.get_rect()
+  windowSurface.blit(text, (windowInfo.current_w - textRect.width - 80, 220 + LINEHEIGHT))
+  # Draw price
+  text = basicFont.render(flowMeter.getFormattedPrice(), True, WHITE, BLACK)
+  textRect = text.get_rect()
+  windowSurface.blit(text, (windowInfo.current_w - textRect.width - 80, 250 + LINEHEIGHT))
+  # Draw calories
+  text = basicFont.render(flowMeter.getFormattedCal(), True, WHITE, BLACK)
+  textRect = text.get_rect()
+  windowSurface.blit(text, (windowInfo.current_w - textRect.width - 80, 280 + LINEHEIGHT))
   # Draw remaining
   text = basicFont.render(flowMeter.getFormattedRemaining(), True, WHITE, BLACK)
   textRect = text.get_rect()
