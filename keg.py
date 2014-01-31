@@ -71,14 +71,14 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   textRect = text.get_rect()
   windowSurface.blit(text, (80,0))
   
-  if (flowMeter.getStatus() == True):
+  if (flowMeter.enabled() == True):
     text = basicFont.render(flowMeter.getFormattedThisPour(), True, WHITE, BLACK)
     textRect = text.get_rect()
     windowSurface.blit(text, (350,200+LINEHEIGHT))
   else:
     text = basicFont.render(flowMeter2.getFormattedThisPour(), True, WHITE, BLACK)
     textRect = text.get_rect()
-    windowSurface.blit(text, (350,200+LINEHEIGHT))
+    windowSurface.blit(text, (450,100+LINEHEIGHT))
   
   
   #########LEFT KEG#########
