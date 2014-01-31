@@ -79,4 +79,4 @@ class FlowMeter():
       
   #Display cost for current pour
   def getFormattedPrice(self):
-    return str(round((self.thisPour * self.grainBill) / 40, 2))
+    return str(round(getFormattedThisPour() * (self.grainBill / 40), 2))
