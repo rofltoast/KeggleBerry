@@ -79,6 +79,10 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   textRect = text.get_rect()
   windowSurface.blit(text, (80,220+LINEHEIGHT))
   
+  text = basicFont.render(flowMeter2.getFormattedPrice(), True, WHITE, BLACK)
+  textRect = text.get_rect()
+  windowSurface.blit(text, (80,250+LINEHEIGHT))
+  
   #text = basicFont.render("TOTAL:", True, WHITE, BLACK)
   #textRect = text.get_rect()
   #windowSurface.blit(text, (80, 220+(2*(LINEHEIGHT+125))))
@@ -94,6 +98,10 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   text = basicFont.render(flowMeter.getFormattedThisPour(), True, WHITE, BLACK)
   textRect = text.get_rect()
   windowSurface.blit(text, (windowInfo.current_w - textRect.width - 80, 220 + LINEHEIGHT))
+  
+  text = basicFont.render(flowMeter.getFormattedPrice(), True, WHITE, BLACK)
+  textRect = text.get_rect()
+  windowSurface.blit(text, (windowInfo.current_w - textRect.width - 80, 250 + LINEHEIGHT))
   
   #text = basicFont.render("TOTAL:", True, WHITE, BLACK)
   #textRect = text.get_rect()
