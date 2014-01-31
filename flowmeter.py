@@ -1,4 +1,5 @@
 import time
+import info
 
 #Init flowmeter class
 class FlowMeter():
