@@ -80,3 +80,8 @@ class FlowMeter():
   #Display cost for current pour
   def getFormattedPrice(self):
     return str(round((self.thisPour * FlowMeter.PINTS_IN_A_LITER) * (self.grainBill / 40), 2))
+    
+  #Display calories for current pour
+  def getFormattedPrice(self):
+    return str(round((self.thisPour * FlowMeter.PINTS_IN_A_LITER) * beerCal, 2))
+
