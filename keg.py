@@ -96,15 +96,15 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   #windowSurface.blit(text, (windowInfo.current_w - textRect.width - 80, 220))
   text = basicFont.render(flowMeter.getFormattedThisPour(), True, WHITE, BLACK)
   textRect = text.get_rect()
-  windowSurface.blit(text, (windowInfo.current_w - textRect.width - 80, 220 + LINEHEIGHT))
+  windowSurface.blit(text, (1080, 220))
   # Draw price
   text = basicFont.render(flowMeter.getFormattedPrice(), True, WHITE, BLACK)
   textRect = text.get_rect()
-  windowSurface.blit(text, (windowInfo.current_w - textRect.width - 80, 250 + LINEHEIGHT))
+  windowSurface.blit(text, (1080, 250))
   # Draw calories
   text = basicFont.render(flowMeter.getFormattedCal(), True, WHITE, BLACK)
   textRect = text.get_rect()
-  windowSurface.blit(text, (windowInfo.current_w - textRect.width - 80, 280 + LINEHEIGHT))
+  windowSurface.blit(text, (1080, 280))
   # Draw remaining
   text = basicFont.render(flowMeter.getFormattedRemaining(), True, WHITE, BLACK)
   textRect = text.get_rect()
