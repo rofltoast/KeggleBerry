@@ -22,7 +22,7 @@ class FlowMeter():
   beer = ''
 
   def __init__(self, beerConf):
-    self.beerConf = beerConf
+    self.beerConf = beerConf #Receive beer parameter (to delineate the correct beer/keg)
     self.clicks = 0
     self.lastClick = int(time.time() * FlowMeter.MS_IN_A_SECOND)
     self.clickDelta = 0
@@ -32,6 +32,7 @@ class FlowMeter():
     self.totalPour = 0.0
     self.enabled = True
     
+    #Grab the correct keg/beer properties
     if beerConf == 'left':
       self.beer = 'left'
       self.bLevel = Info.beerTotalL
