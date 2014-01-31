@@ -62,10 +62,7 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   windowSurface.blit(text, (80,0))
   
   #########LEFT KEG#########
-  # Draw Ammt Poured 
-  #text = basicFont.render("CURRENT:", True, WHITE, BLACK)
-  #textRect = text.get_rect()
-  #windowSurface.blit(text, (80,220))
+  # Draw Ammt Poured
   text = basicFont.render(flowMeter2.getFormattedThisPour(), True, WHITE, BLACK)
   textRect = text.get_rect()
   windowSurface.blit(text, (80,220))
@@ -83,10 +80,7 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   windowSurface.blit(text, (50, 765))
 
   #########RIGHT KEG#########
-  # Draw Ammt Poured Total
-  #text = basicFont.render("CURRENT:", True, WHITE, BLACK)
-  #textRect = text.get_rect()
-  #windowSurface.blit(text, (windowInfo.current_w - textRect.width - 80, 220))
+  # Draw Ammt Poured
   text = basicFont.render(flowMeter.getFormattedThisPour(), True, WHITE, BLACK)
   textRect = text.get_rect()
   windowSurface.blit(text, (1080, 220))
