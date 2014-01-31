@@ -53,12 +53,12 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   windowSurface.fill(BLACK)#No background image; black fill
   
   # Draw Beer Name Left Keg
-  text = beerFont.render(LEFTBEER, True, WHITE, BLACK)
+  text = beerFont.render(Info.beerNameL, True, WHITE, BLACK)
   textRect = text.get_rect()
   windowSurface.blit(text, (windowInfo.current_w - textRect.width - 80, 0))
 
   # Draw Beer Name Right Keg
-  text = beerFont.render(RIGHTBEER, True, WHITE, BLACK)
+  text = beerFont.render(Info.beerNameR, True, WHITE, BLACK)
   textRect = text.get_rect()
   windowSurface.blit(text, (80,0))
   
