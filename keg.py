@@ -40,7 +40,7 @@ BLACK = (0,0,0)
 WHITE = (255,255,255)
 
 # set up the window surface
-windowSurface = pygame.display.set_mode((VIEW_WIDTH,VIEW_HEIGHT), WINDOWED, 32) 
+windowSurface = pygame.display.set_mode((VIEW_WIDTH,VIEW_HEIGHT), 32) 
 windowInfo = pygame.display.Info()
 FONTSIZE = 35
 LINEHEIGHT = 28
