@@ -84,5 +84,5 @@ class FlowMeter():
     
   #Display calories for current pour
   def getFormattedCal(self):
-    return str(round((self.thisPour * FlowMeter.PINTS_IN_A_LITER) * beerCal, 2))
+    return str(round((self.thisPour * FlowMeter.PINTS_IN_A_LITER) * self.beerCal, 2))
 
