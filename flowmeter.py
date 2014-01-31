@@ -30,10 +30,6 @@ class FlowMeter():
     self.thisPour = 0.0
     self.totalPour = 0.0
     self.enabled = True
-  if self.beerConf == 'left':
-    self.beer = 'left'
-  else:
-    self.beer = 'right'
 
   def update(self, currentTime):
     self.clicks += 1
@@ -48,6 +44,11 @@ class FlowMeter():
       self.totalPour += instPour
     # Update the last click
     self.lastClick = currentTime
+
+if self.beerConf == 'left':
+  self.beer = 'left'
+else:
+  self.beer = 'right'
 
   def getFormattedClickDelta(self):
      return str(self.clickDelta) + ' ms'
