@@ -17,6 +17,7 @@ class FlowMeter():
   bLevel = 40.0
   bLevelL = 18.9271
   grainBill = 38.00
+  beerCal = 71
 
   def __init__(self, displayFormat):
     self.displayFormat = displayFormat
@@ -82,6 +83,6 @@ class FlowMeter():
     return str(round((self.thisPour * FlowMeter.PINTS_IN_A_LITER) * (self.grainBill / 40), 2))
     
   #Display calories for current pour
-  def getFormattedPrice(self):
+  def getFormattedCal(self):
     return str(round((self.thisPour * FlowMeter.PINTS_IN_A_LITER) * beerCal, 2))
 
