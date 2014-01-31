@@ -5,7 +5,7 @@ class FlowMeter():
   PINTS_IN_A_LITER = 2.11338
   SECONDS_IN_A_MINUTE = 60
   MS_IN_A_SECOND = 1000.0
-  displayFormat = 'metric'
+  beerConf = ""
   enabled = True
   clicks = 0
   lastClick = 0
@@ -19,7 +19,7 @@ class FlowMeter():
   grainBill = 38.00
   beerCal = 71
 
-  def __init__(self, displayFormat):
+  def __init__(self, beerConf):
     self.displayFormat = displayFormat
     self.clicks = 0
     self.lastClick = int(time.time() * FlowMeter.MS_IN_A_SECOND)
