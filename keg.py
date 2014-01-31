@@ -83,7 +83,7 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   textRect = text.get_rect()
   windowSurface.blit(text, (80,250+LINEHEIGHT))
   # Draw calories
-  text = basicFont.render(flowMeter.getFormattedCal(), True, WHITE, BLACK)
+  text = basicFont.render(flowMeter2.getFormattedCal(), True, WHITE, BLACK)
   textRect = text.get_rect()
   windowSurface.blit(text, (80,280+LINEHEIGHT))
   # Draw remaining
