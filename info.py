@@ -4,7 +4,7 @@ class Info():
  beerCalL = 10 #Left beer calories
  beerPriceL = 49 #Left beer grainbill
  beerTotalL = 40 #Left beer total beer in PINTS
- beerPicL = "" #Left beer label
+ beerPicL = "" #Left beer label (.png)
  beerAboutL = "" #Left beer synopsis
  beerIngL = "" #Left beer ingredients
  beerABVL = 0 #Left beer ABV
@@ -15,7 +15,7 @@ class Info():
  beerCalR = 89 #Right beer calories
  beerPriceR = 31 #Right beer grainbill
  beerTotalR = 34 #Right beer total beer in PINTS
- beerPicR = "" #Right beer label
+ beerPicR = "" #Right beer label (.png)
  beerAboutR = "" #Right beer synopsis
  beerIngR = "" #Right beer ingredients
  beerABVR = 0 #Right beer ABV
