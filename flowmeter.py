@@ -75,10 +75,6 @@ class FlowMeter():
   #Get/Update remaining beer
   def getFormattedRemaining(self):
     return str(round(self.bLevel - self.totalPour * FlowMeter.PINTS_IN_A_LITER, 2)) + ' pints remaining'
-      
-  #Display cost for current pour
-  def getFormattedPrice(self):
-    return str(round((self.thisPour * FlowMeter.PINTS_IN_A_LITER) * (self.grainBill / 40), 2)) + ' USD'
     
   #Display calories for current pour
   def getFormattedCal(self):
