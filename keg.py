@@ -24,8 +24,6 @@ pygame.init()
 # set up the window
 VIEW_WIDTH = 1920
 VIEW_HEIGHT = 1200
-LEFTBEER = 'Stout'
-RIGHTBEER = 'Pale Ale'
 pygame.display.set_caption('KeggleBerry')
 
 # hide the mouse
@@ -126,13 +124,13 @@ while True:
   currentTime = int(time.time() * FlowMeter.MS_IN_A_SECOND)
   
   if (fm.thisPour > 0.05 and currentTime - fm.lastClick > 2000): # 2 seconds of inactivity causes a tweet
-    tweet = "Someone just poured " + fm.getFormattedThisPour() + " of " + Info.beerNameL + " from the keg! " + "Only " + fm.getFormattedRemaining() + "!"
+    tweet = "Someone just poured " + fm.getFormattedThisPour() + " of " + Info.beerNameR + " from the keg! " + "Only " + fm.getFormattedRemaining() + "!"
     ######insert SQL push here(thisPour)
     fm.thisPour = 0.0
     tweetPour(tweet)
  
   if (fm2.thisPour > 0.05 and currentTime - fm2.lastClick > 2000): # 2 seconds of inactivity causes a tweet
-    tweet = "Someone just poured " + fm2.getFormattedThisPour() + " of " + Info.beerNameR + " from the keg! " + "Only " + fm2.getFormattedRemaining() + "!"
+    tweet = "Someone just poured " + fm2.getFormattedThisPour() + " of " + Info.beerNameL + " from the keg! " + "Only " + fm2.getFormattedRemaining() + "!"
     ######insert SQL push here(thisPour)
     fm2.thisPour = 0.0
     tweetPour(tweet)
