@@ -67,10 +67,6 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   text = basicFont.render(flowMeter2.getFormattedThisPour(), True, WHITE, BLACK)
   textRect = text.get_rect()
   windowSurface.blit(text, (80,220))
-  # Draw price
-  text = basicFont.render(flowMeter2.getFormattedPrice(), True, WHITE, BLACK)
-  textRect = text.get_rect()
-  windowSurface.blit(text, (80,250))
   # Draw calories
   text = basicFont.render(flowMeter2.getFormattedCal(), True, WHITE, BLACK)
   textRect = text.get_rect()
@@ -85,10 +81,6 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   text = basicFont.render(flowMeter.getFormattedThisPour(), True, WHITE, BLACK)
   textRect = text.get_rect()
   windowSurface.blit(text, (1080, 220))
-  # Draw price
-  text = basicFont.render(flowMeter.getFormattedPrice(), True, WHITE, BLACK)
-  textRect = text.get_rect()
-  windowSurface.blit(text, (1080, 250))
   # Draw calories
   text = basicFont.render(flowMeter.getFormattedCal(), True, WHITE, BLACK)
   textRect = text.get_rect()
@@ -134,13 +126,13 @@ while True:
   currentTime = int(time.time() * FlowMeter.MS_IN_A_SECOND)
   
   if (fm.thisPour > 0.05 and currentTime - fm.lastClick > 2000): # 2 seconds of inactivity causes a tweet
-    tweet = "Someone just poured " + fm.getFormattedThisPour() + " of " + Info.beerNameL + " from the keg! ($" + fm.getFormattedPrice() + ") only " + fm.getFormattedRemaining() + " remaining!"
+    tweet = "Someone just poured " + fm.getFormattedThisPour() + " of " + Info.beerNameL + " from the keg! " + "Only " + fm.getFormattedRemaining() + " remaining!"
     ######insert SQL push here(thisPour)
     fm.thisPour = 0.0
     tweetPour(tweet)
  
   if (fm2.thisPour > 0.05 and currentTime - fm2.lastClick > 2000): # 2 seconds of inactivity causes a tweet
-    tweet = "Someone just poured " + fm2.getFormattedThisPour() + " of " + Info.beerNameR + " from the keg! ($" + fm2.getFormattedPrice() + ") only " + fm2.getFormattedRemaining() + " remaining!"
+    tweet = "Someone just poured " + fm2.getFormattedThisPour() + " of " + Info.beerNameR + " from the keg! " + "Only " + fm2.getFormattedRemaining() + " remaining!"
     ######insert SQL push here(thisPour)
     fm2.thisPour = 0.0
     tweetPour(tweet)
