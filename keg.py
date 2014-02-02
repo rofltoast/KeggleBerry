@@ -10,7 +10,7 @@ from twitter import *
 from flowmeter import *
 from seekrits import *
 from info import *
-from thermometer import read_temp
+from thermometer import *
 
 t = Twitter( auth=OAuth(OAUTH_TOKEN, OAUTH_SECRET, CONSUMER_KEY, CONSUMER_SECRET) )
 
