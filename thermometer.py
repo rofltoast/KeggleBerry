@@ -17,7 +17,7 @@ class Temp():
      return lines
  
  def read_temp(self):
-     lines = read_temp_raw()
+     lines = self.read_temp_raw()
      while lines[0].strip()[-3:] != 'YES':
          time.sleep(0.2)
          lines = self.read_temp_raw()
