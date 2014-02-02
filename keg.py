@@ -10,6 +10,7 @@ from twitter import *
 from flowmeter import *
 from seekrits import *
 from info import *
+from thermometer import *
 
 t = Twitter( auth=OAuth(OAUTH_TOKEN, OAUTH_SECRET, CONSUMER_KEY, CONSUMER_SECRET) )
 
@@ -59,6 +60,11 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   text = beerFont.render(Info.beerNameL, True, WHITE, BLACK)
   textRect = text.get_rect()
   windowSurface.blit(text, (80,0))
+  
+  text = beerFont.render(thermometer.read_temp(), True, WHITE, BLACK)
+  textRect = text.get_rect()
+  windowSurface.blit(text, (590,0))  
+  
   
   #########LEFT KEG#########
   # Draw Ammt Poured
