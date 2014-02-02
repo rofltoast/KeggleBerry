@@ -86,15 +86,15 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   # Draw Ammt Poured
   text = basicFont.render(flowMeter.getFormattedThisPour(), True, WHITE, BLACK)
   textRect = text.get_rect()
-  windowSurface.blit(text, (1080, 220))
+  windowSurface.blit(text, (1850, 220))
   # Draw calories
   text = basicFont.render(flowMeter.getFormattedCal(), True, WHITE, BLACK)
   textRect = text.get_rect()
-  windowSurface.blit(text, (1080, 280))
+  windowSurface.blit(text, (1850, 280))
   # Draw remaining
   text = basicFont.render(flowMeter.getFormattedRemaining(), True, WHITE, BLACK)
   textRect = text.get_rect()
-  windowSurface.blit(text, (955, 765))
+  windowSurface.blit(text, (1820, 765))
 
   # Display everything
   pygame.display.flip()
