@@ -62,9 +62,10 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   textRect = text.get_rect()
   windowSurface.blit(text, (80,0))
   
+  #Draw temperature
   text = beerFont.render(temp.read_temp(), True, WHITE, BLACK)
   textRect = text.get_rect()
-  windowSurface.blit(text, (590,0))  
+  windowSurface.blit(text, (945,0))  
   
   
   #########LEFT KEG#########
