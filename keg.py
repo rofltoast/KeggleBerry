@@ -33,6 +33,7 @@ pygame.mouse.set_visible(False)
 # set up the flow meters
 fm = FlowMeter('right')#Default measurement is pints, swtich to 'metric' for L
 fm2 = FlowMeter('left')#Default measurement is pints, swtich to 'metric' for L
+temp = Temp()
 tweet = ''
 
 # set up the colors
@@ -61,7 +62,7 @@ def renderThings(flowMeter, flowMeter2, tweet, windowSurface, basicFont):
   textRect = text.get_rect()
   windowSurface.blit(text, (80,0))
   
-  text = beerFont.render(Temp.read_temp(), True, WHITE, BLACK)
+  text = beerFont.render(temp.read_temp(), True, WHITE, BLACK)
   textRect = text.get_rect()
   windowSurface.blit(text, (590,0))  
   
